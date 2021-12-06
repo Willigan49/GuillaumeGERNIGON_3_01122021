@@ -12,15 +12,41 @@
     gap: 15px;
     justify-content: center;
     align-items: center;
-    background-color: darken($color: white, $amount: 7%);
+    background-color: darken($color: white, $amount: 10%);
     &__icon {
       color: lighten($color: black, $amount: 50%);
     }
   }
 }
 
+.hero {
+  background-color: lighten($color: $colour-grey, $amount: 12%);
+  text-align: center;
+  padding: 50px 0 80px;
+  .hero__title {
+    margin-top: 0px;
+  }
+  .hero__intro {
+    color: lighten($color: black, $amount: 40%);
+    margin-bottom: 40px;
+  }
+  .hero__button {
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    box-shadow: 0px 5px 5px darken($color: white, $amount: 30%);
+    &--hover:hover {
+      background: linear-gradient(
+        lighten($color: $colour-secondary, $amount: 10%),
+        lighten($color: $colour-primary, $amount: 10%)
+      );
+    }
+  }
+}
+
 .fonctionnement {
-  padding: 0px 20px;
+  @include section-spacing;
   .fonctionnement__title {
     margin: 20px 0;
   }
@@ -30,11 +56,59 @@
   }
   .card {
     @include fonctionnement-basic-card;
-    &--pink {
-      @include fonctionnement-basic-card;
+    &--hover:hover {
       background-color: lighten($color: $colour-secondary, $amount: 20%);
       i {
         color: $colour-primary;
+      }
+    }
+  }
+}
+
+.restaurants {
+  @include section-spacing;
+  .card-container {
+    @include flex-column;
+    gap: 30px;
+    .card {
+      border-radius: 25px;
+      box-shadow: 0px 5px 5px darken($color: white, $amount: 15%);
+      .card__img {
+        height: 200px;
+        position: relative;
+        &__insert {
+          position: absolute;
+          top: 0px;
+          right: 15px;
+          padding: 5px 10px;
+          background-color: $colour-tertiary;
+          font-size: 0.9em;
+          color: darken($color: $colour-tertiary, $amount: 40%);
+          font-weight: 500;
+          border-radius: 2px;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 60%;
+        border-radius: 25px 25px 0 0;
+      }
+      &__text {
+        @include flex-row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        h3 {
+          margin: 15px 0 7px;
+        }
+        p {
+          margin: 0 0 15px;
+        }
+        i {
+          font-size: 1.5em;
+        }
       }
     }
   }
