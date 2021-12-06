@@ -11,6 +11,18 @@
   margin: auto;
 }
 
+.wrapper {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,7 +33,7 @@
           flex-direction: column;
 }
 
-.header__logo {
+.header .logo {
   width: 100%;
   text-align: center;
   padding: 20px 0;
@@ -30,7 +42,7 @@
   position: relative;
 }
 
-.header__location {
+.header .location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,11 +60,109 @@
   background-color: #ededed;
 }
 
-.header__location i, .header__location p {
-  color: #4d4d4d;
+.header .location__icon {
+  color: gray;
 }
 
-.header__location p {
-  font-family: "Roboto", sans-serif;
+.fonctionnement {
+  padding: 0px 20px;
+}
+
+.fonctionnement .fonctionnement__title {
+  margin: 20px 0;
+}
+
+.fonctionnement .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.fonctionnement .card {
+  -webkit-box-shadow: 0px 5px 5px #d9d9d9;
+          box-shadow: 0px 5px 5px #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  position: relative;
+  gap: 20px;
+}
+
+.fonctionnement .card p:first-child {
+  position: absolute;
+  left: -15px;
+  border-radius: 40px;
+  padding: 5px 10px;
+  background-color: #9356dc;
+  color: white;
+}
+
+.fonctionnement .card p:last-child {
+  font-weight: bold;
+}
+
+.fonctionnement .card i {
+  margin-left: 25px;
+  font-size: 1.3em;
+  color: gray;
+}
+
+.fonctionnement .card--pink {
+  -webkit-box-shadow: 0px 5px 5px #d9d9d9;
+          box-shadow: 0px 5px 5px #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  position: relative;
+  gap: 20px;
+  background-color: #ffdff6;
+}
+
+.fonctionnement .card--pink p:first-child {
+  position: absolute;
+  left: -15px;
+  border-radius: 40px;
+  padding: 5px 10px;
+  background-color: #9356dc;
+  color: white;
+}
+
+.fonctionnement .card--pink p:last-child {
+  font-weight: bold;
+}
+
+.fonctionnement .card--pink i {
+  margin-left: 25px;
+  font-size: 1.3em;
+  color: gray;
+}
+
+.fonctionnement .card--pink i {
+  color: #9356dc;
 }
 /*# sourceMappingURL=main.css.map */
