@@ -2,7 +2,7 @@
   background-color: darken($color: $colour-grey, $amount: 60%);
   padding: 10px 20px;
   h4 {
-    font-family: "Shrikhand", cursive;
+    font-family: $font-shrikhand;
   }
   ul {
     @include flex-column;
