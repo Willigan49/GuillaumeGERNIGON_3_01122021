@@ -1,0 +1,13 @@
+.hero__button {
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  background: linear-gradient($colour-secondary, $colour-primary);
+  box-shadow: $box-shadow darken($color: white, $amount: 30%);
+  &:hover {
+    background: linear-gradient(
+      lighten($color: $colour-secondary, $amount: 10%),
+      lighten($color: $colour-primary, $amount: 10%)
+    );
+  }
+}

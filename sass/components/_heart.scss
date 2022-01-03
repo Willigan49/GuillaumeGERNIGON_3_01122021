@@ -1,0 +1,32 @@
+.heart-container {
+  position: relative;
+  .empty-heart {
+    width: 30px;
+    opacity: 1;
+    transition: opacity 2s;
+  }
+  .solid-heart {
+    position: absolute;
+    opacity: 0;
+    width: 30x;
+    z-index: 1;
+    left: 0;
+    transition: opacity 2s;
+  }
+  &:hover {
+    .empty-heart {
+      opacity: 0;
+    }
+    .solid-heart {
+      opacity: 1;
+    }
+  }
+}
+
+/* @keyframes slidein{
+    from{
+     .empty-heart{
+         opacity: 1;
+     }
+    }
+} */
