@@ -26,10 +26,62 @@
       }
     }
 
+    .entrées,
+    .plats,
+    .desserts {
+      h2 {
+        opacity: 0;
+      }
+    }
+
+    .entrées {
+      h2 {
+        @include fade-animation(1s);
+      }
+    }
+    .plats {
+      h2 {
+        @include fade-animation(2.5s);
+      }
+    }
+    .desserts {
+      h2 {
+        @include fade-animation(4s);
+      }
+    }
+
     .card-container {
       @include flex-column;
       gap: 15px;
+      .first {
+        @include fade-animation(1s);
+      }
+      .second {
+        @include fade-animation(1.5s);
+      }
+      .third {
+        @include fade-animation(2s);
+      }
+      .four {
+        @include fade-animation(2.5s);
+      }
+      .five {
+        @include fade-animation(3s);
+      }
+      .six {
+        @include fade-animation(3.5s);
+      }
+      .seven {
+        @include fade-animation(4s);
+      }
+      .eight {
+        @include fade-animation(4.5s);
+      }
+      .nine {
+        @include fade-animation(5s);
+      }
       .container__card {
+        opacity: 0;
         background-color: white;
         border-radius: 15px;
         padding: 15px;
