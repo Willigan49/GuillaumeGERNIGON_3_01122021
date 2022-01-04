@@ -80,26 +80,59 @@
       .nine {
         @include fade-animation(5s);
       }
-      .container__card {
-        opacity: 0;
-        background-color: white;
-        border-radius: 15px;
-        padding: 15px;
-        box-shadow: $box-shadow;
-        h3,
-        p {
-          margin: 0;
-        }
-        em {
-          font-weight: bold;
-          font-style: normal;
-        }
-        div {
-          @include flex-row;
-          align-items: center;
-          justify-content: space-between;
+    }
+  }
+  .card {
+    @include flex-row;
+    opacity: 0;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    &:hover {
+      .card__check {
+        margin-right: 0;
+        transition: margin-right 400ms;
+        i {
+          transform: rotate(360deg);
+          transition: transform 400ms 100ms;
         }
       }
+    }
+    &__info {
+      padding: 15px;
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      div {
+        @include flex-row;
+        justify-content: space-between;
+      }
+    }
+    &__check {
+      position: relative;
+      background-color: $colour-tertiary;
+      height: 100%;
+      width: 5rem;
+      border-radius: 0 15px 15px 0;
+      @include flex-row;
+      justify-content: center;
+      align-items: center;
+      margin-right: -80px;
+      i {
+        color: white;
+        font-size: 2em;
+        transform: rotate(90deg);
+      }
+    }
+    h3,
+    p {
+      margin: 0;
+    }
+    em {
+      font-weight: bold;
+      font-style: normal;
     }
   }
 }
