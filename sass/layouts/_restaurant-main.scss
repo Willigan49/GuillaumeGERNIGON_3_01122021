@@ -10,11 +10,17 @@
   .card-menu {
     background-color: lighten($color: $colour-grey, $amount: 15);
     border-radius: 40px 40px 0 0;
-    height: 1100px;
     margin-top: -70px;
+    margin-bottom: 25px;
     position: relative;
     padding: 20px;
+    @include flex-column;
+    justify-content: space-between;
+    gap: 25px;
+    align-content: space-around;
+    align-items: center;
     header {
+      width: 100%;
       @include flex-row;
       justify-content: space-between;
       align-items: center;
@@ -31,10 +37,13 @@
     .desserts {
       h2 {
         opacity: 0;
+        border-bottom: 3px solid $colour-tertiary;
+        width: 30px;
       }
     }
 
     .entrées {
+      width: 100%;
       h2 {
         @include fade-animation(1s);
       }
@@ -80,9 +89,13 @@
       .nine {
         @include fade-animation(5s);
       }
+      .ten {
+        @include fade-animation(5.5s);
+      }
     }
   }
   .card {
+    cursor: pointer;
     @include flex-row;
     opacity: 0;
     background-color: white;
@@ -100,12 +113,14 @@
       }
     }
     &__info {
+      @include flex-column;
+      gap: 5px;
       padding: 15px;
       width: 100%;
-      text-overflow: ellipsis;
-      white-space: nowrap;
       overflow: hidden;
       div {
+        text-overflow: ellipsis;
+        white-space: nowrap;
         @include flex-row;
         justify-content: space-between;
       }

@@ -88,7 +88,10 @@ a {
   color: black;
 }
 
-body {
+body,
+h2,
+p,
+a {
   font-family: "Roboto", sans-serif;
 }
 
@@ -97,7 +100,10 @@ h1 {
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: gray;
 }
 
 p {
@@ -372,13 +378,30 @@ a {
 .restaurant-main .card-menu {
   background-color: #f9f9f9;
   border-radius: 40px 40px 0 0;
-  height: 1100px;
   margin-top: -70px;
+  margin-bottom: 25px;
   position: relative;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 25px;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .restaurant-main .card-menu header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,21 +429,27 @@ a {
 .restaurant-main .card-menu .plats h2,
 .restaurant-main .card-menu .desserts h2 {
   opacity: 0;
+  border-bottom: 3px solid #99e2d0;
+  width: 30px;
+}
+
+.restaurant-main .card-menu .entrées {
+  width: 100%;
 }
 
 .restaurant-main .card-menu .entrées h2 {
-  -webkit-animation: fade-in 1s 1s both;
-          animation: fade-in 1s 1s both;
+  -webkit-animation: fade-in 500ms 1s both;
+          animation: fade-in 500ms 1s both;
 }
 
 .restaurant-main .card-menu .plats h2 {
-  -webkit-animation: fade-in 1s 2.5s both;
-          animation: fade-in 1s 2.5s both;
+  -webkit-animation: fade-in 500ms 2.5s both;
+          animation: fade-in 500ms 2.5s both;
 }
 
 .restaurant-main .card-menu .desserts h2 {
-  -webkit-animation: fade-in 1s 4s both;
-          animation: fade-in 1s 4s both;
+  -webkit-animation: fade-in 500ms 4s both;
+          animation: fade-in 500ms 4s both;
 }
 
 .restaurant-main .card-menu .card-container {
@@ -435,51 +464,57 @@ a {
 }
 
 .restaurant-main .card-menu .card-container .first {
-  -webkit-animation: fade-in 1s 1s both;
-          animation: fade-in 1s 1s both;
+  -webkit-animation: fade-in 500ms 1s both;
+          animation: fade-in 500ms 1s both;
 }
 
 .restaurant-main .card-menu .card-container .second {
-  -webkit-animation: fade-in 1s 1.5s both;
-          animation: fade-in 1s 1.5s both;
+  -webkit-animation: fade-in 500ms 1.5s both;
+          animation: fade-in 500ms 1.5s both;
 }
 
 .restaurant-main .card-menu .card-container .third {
-  -webkit-animation: fade-in 1s 2s both;
-          animation: fade-in 1s 2s both;
+  -webkit-animation: fade-in 500ms 2s both;
+          animation: fade-in 500ms 2s both;
 }
 
 .restaurant-main .card-menu .card-container .four {
-  -webkit-animation: fade-in 1s 2.5s both;
-          animation: fade-in 1s 2.5s both;
+  -webkit-animation: fade-in 500ms 2.5s both;
+          animation: fade-in 500ms 2.5s both;
 }
 
 .restaurant-main .card-menu .card-container .five {
-  -webkit-animation: fade-in 1s 3s both;
-          animation: fade-in 1s 3s both;
+  -webkit-animation: fade-in 500ms 3s both;
+          animation: fade-in 500ms 3s both;
 }
 
 .restaurant-main .card-menu .card-container .six {
-  -webkit-animation: fade-in 1s 3.5s both;
-          animation: fade-in 1s 3.5s both;
+  -webkit-animation: fade-in 500ms 3.5s both;
+          animation: fade-in 500ms 3.5s both;
 }
 
 .restaurant-main .card-menu .card-container .seven {
-  -webkit-animation: fade-in 1s 4s both;
-          animation: fade-in 1s 4s both;
+  -webkit-animation: fade-in 500ms 4s both;
+          animation: fade-in 500ms 4s both;
 }
 
 .restaurant-main .card-menu .card-container .eight {
-  -webkit-animation: fade-in 1s 4.5s both;
-          animation: fade-in 1s 4.5s both;
+  -webkit-animation: fade-in 500ms 4.5s both;
+          animation: fade-in 500ms 4.5s both;
 }
 
 .restaurant-main .card-menu .card-container .nine {
-  -webkit-animation: fade-in 1s 5s both;
-          animation: fade-in 1s 5s both;
+  -webkit-animation: fade-in 500ms 5s both;
+          animation: fade-in 500ms 5s both;
+}
+
+.restaurant-main .card-menu .card-container .ten {
+  -webkit-animation: fade-in 500ms 5.5s both;
+          animation: fade-in 500ms 5.5s both;
 }
 
 .restaurant-main .card {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,14 +546,22 @@ a {
 }
 
 .restaurant-main .card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
   padding: 15px;
   width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
 
 .restaurant-main .card__info div {
+  text-overflow: ellipsis;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,7 +613,7 @@ a {
   font-style: normal;
 }
 
-.hero__button {
+.gradient-button {
   color: white;
   padding: 15px 25px;
   border-radius: 30px;
@@ -580,7 +623,7 @@ a {
           box-shadow: 0px 5px 5px #d9d9d9 #b3b3b3;
 }
 
-.hero__button:hover {
+.gradient-button:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
   background: linear-gradient(#fface8, #ae80e5);
 }

@@ -14,5 +14,5 @@
 }
 
 @mixin fade-animation($delay) {
-  animation: fade-in 1s $delay both;
+  animation: fade-in 500ms $delay both;
 }
