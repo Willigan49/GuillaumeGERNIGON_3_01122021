@@ -1,3 +1,6 @@
+.blur-effect {
+  @include blur-out-animation(5s);
+}
 .header {
   @include flex-column;
   .logo {

@@ -37,13 +37,13 @@
         opacity: 0;
         border-bottom: 3px solid $colour-tertiary;
         width: 30px;
-        @include fade-animation(1.5s);
+        @include fade-in-animation(500ms);
       }
     }
 
     @for $i from 1 through 4 {
       .card-container .card:nth-child(#{$i}) {
-        @include fade-animation($i * 1.5s);
+        @include fade-in-animation($i * 500ms);
       }
     }
 

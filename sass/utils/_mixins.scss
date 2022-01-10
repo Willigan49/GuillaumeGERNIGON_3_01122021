@@ -13,6 +13,14 @@
   padding: 0px 20px;
 }
 
-@mixin fade-animation($delay) {
+@mixin fade-in-animation($delay) {
   animation: fade-in 500ms $delay both;
+}
+
+@mixin fade-out-animation($delay) {
+  animation: fade-out 1s $delay both;
+}
+
+@mixin blur-out-animation($delay) {
+  animation: blur-out 1s $delay both;
 }

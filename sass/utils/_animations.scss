@@ -24,3 +24,23 @@
     opacity: 1;
   }
 }
+
+@keyframes fade-out {
+  from {
+    opacity: 0.8;
+    visibility: initial;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes blur-out {
+  from {
+    filter: blur(4px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
