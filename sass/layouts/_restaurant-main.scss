@@ -31,67 +31,25 @@
         font-size: 1.5em;
       }
     }
-
-    .entrées,
-    .plats,
-    .desserts {
+    .menu-part {
+      width: 100%;
       h2 {
         opacity: 0;
         border-bottom: 3px solid $colour-tertiary;
         width: 30px;
+        @include fade-animation(1.5s);
       }
     }
 
-    .entrées {
-      width: 100%;
-      h2 {
-        @include fade-animation(1s);
-      }
-    }
-    .plats {
-      h2 {
-        @include fade-animation(2.5s);
-      }
-    }
-    .desserts {
-      h2 {
-        @include fade-animation(4s);
+    @for $i from 1 through 4 {
+      .card-container .card:nth-child(#{$i}) {
+        @include fade-animation($i * 1.5s);
       }
     }
 
     .card-container {
       @include flex-column;
       gap: 15px;
-      .first {
-        @include fade-animation(1s);
-      }
-      .second {
-        @include fade-animation(1.5s);
-      }
-      .third {
-        @include fade-animation(2s);
-      }
-      .four {
-        @include fade-animation(2.5s);
-      }
-      .five {
-        @include fade-animation(3s);
-      }
-      .six {
-        @include fade-animation(3.5s);
-      }
-      .seven {
-        @include fade-animation(4s);
-      }
-      .eight {
-        @include fade-animation(4.5s);
-      }
-      .nine {
-        @include fade-animation(5s);
-      }
-      .ten {
-        @include fade-animation(5.5s);
-      }
     }
   }
   .card {
@@ -103,13 +61,17 @@
     box-shadow: $box-shadow;
     overflow: hidden;
     &:hover {
-      .card__check {
-        margin-right: 0;
-        transition: margin-right 400ms;
-        i {
-          transform: rotate(360deg);
-          transition: transform 400ms 100ms;
-        }
+      i {
+        transform: rotate(360deg);
+        transition: transform 400ms 100ms;
+      }
+      .card__info {
+        transition: width 400ms;
+        width: 80%;
+      }
+      .card__checked {
+        transition: width 400ms;
+        width: 20%;
       }
     }
     &__info {
@@ -117,24 +79,21 @@
       gap: 5px;
       padding: 15px;
       width: 100%;
-      overflow: hidden;
       div {
-        text-overflow: ellipsis;
-        white-space: nowrap;
         @include flex-row;
         justify-content: space-between;
       }
     }
+    &__checked {
+      width: 0%;
+    }
     &__check {
-      position: relative;
       background-color: $colour-tertiary;
       height: 100%;
-      width: 5rem;
       border-radius: 0 15px 15px 0;
       @include flex-row;
       justify-content: center;
       align-items: center;
-      margin-right: -80px;
       i {
         color: white;
         font-size: 2em;
@@ -144,6 +103,10 @@
     h3,
     p {
       margin: 0;
+      overflow: hidden;
+      width: 80%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     em {
       font-weight: bold;
