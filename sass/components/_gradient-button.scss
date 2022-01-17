@@ -3,7 +3,7 @@
   padding: 15px 25px;
   border-radius: 30px;
   background: linear-gradient($colour-secondary, $colour-primary);
-  box-shadow: $box-shadow darken($color: white, $amount: 30%);
+  box-shadow: $box-shadow;
   &:hover {
     background: linear-gradient(
       lighten($color: $colour-secondary, $amount: 10%),
