@@ -107,6 +107,28 @@
   }
 }
 
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -116,6 +138,18 @@
   max-width: 550px;
   width: 100%;
   margin: auto;
+}
+
+@media screen and (min-width: 550px) {
+  .wrapper {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    max-width: 1920px;
+  }
 }
 
 ul {
@@ -159,8 +193,8 @@ a {
 }
 
 .blur-effect {
-  -webkit-animation: blur-out 1s 5s both;
-          animation: blur-out 1s 5s both;
+  -webkit-animation: blur-out 1s 3s both;
+          animation: blur-out 1s 3s both;
 }
 
 .header {
@@ -282,6 +316,24 @@ a {
   color: #9356dc;
 }
 
+@media screen and (min-width: 800px) {
+  .fonctionnement .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .fonctionnement .card {
+    width: 100%;
+  }
+}
+
 .restaurants {
   margin: 70px 0;
   padding: 0px 20px;
@@ -360,6 +412,21 @@ a {
   font-size: 1.5em;
 }
 
+@media screen and (min-width: 800px) {
+  .restaurants .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .restaurants .card {
+    width: 100%;
+  }
+}
+
 .footer {
   background-color: #3a3a3a;
   padding: 10px 20px;
@@ -386,6 +453,25 @@ a {
 
 .footer a {
   color: white;
+}
+
+@media screen and (min-width: 800px) {
+  .footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .restaurant-header {
@@ -631,8 +717,8 @@ a {
   z-index: 2;
   background-color: #ff79da;
   opacity: 1;
-  -webkit-animation: fade-out 1s 5s both;
-          animation: fade-out 1s 5s both;
+  -webkit-animation: fade-out 1s 3s both;
+          animation: fade-out 1s 3s both;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -669,28 +755,6 @@ a {
   transform: translateZ(0);
   -webkit-animation: load8 1.1s infinite linear;
   animation: load8 1.1s infinite linear;
-}
-
-@-webkit-keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
 }
 
 .gradient-button {

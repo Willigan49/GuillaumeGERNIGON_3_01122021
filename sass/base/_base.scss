@@ -6,6 +6,12 @@
   max-width: 550px;
   width: 100%;
   margin: auto;
+  @media screen and (min-width: 550px) {
+    max-width: 1200px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1920px;
+  }
 }
 
 ul {
